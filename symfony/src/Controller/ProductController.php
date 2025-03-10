@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use App\Model\Product;
+use App\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -47,7 +47,7 @@ class ProductController extends AbstractController
         return $this->json($product->toArray());
     }
 
-    #[Route('/api/product', name: 'product', methods: ['POST'])]
+    #[Route('/api/products', name: 'create_product', methods: ['POST'])]
     public function createProduct(Request $request): JsonResponse
     {
         $data = json_decode($request->getContent(), true);
