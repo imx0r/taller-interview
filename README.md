@@ -10,7 +10,7 @@
 Open `http://localhost:4200` on your browser to access the frontend.
 
 ### Backend
-For the backend we have the base URL: `http://127.0.0.1:8000/api` for the following routes:
+For the backend we have the base URL: `https://127.0.0.1:8000/api` for the following routes:
 
 | PATH               | VERB   | PARAMETERS       | DESCRIPTION          |
 |--------------------|--------|------------------|----------------------|
