@@ -2,11 +2,20 @@
 
 namespace App\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 class Product
 {
     private int $id;
+
+    #[Assert\NotBlank]
     private string $name;
+
+    #[Assert\NotBlank]
     private string $description;
+
+    #[Assert\NotBlank]
+    #[Assert\GreaterThan(0)]
     private float $price;
 
     public function __construct(int $id, string $name, string $description, float $price)
